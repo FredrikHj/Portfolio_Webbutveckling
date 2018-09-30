@@ -1,0 +1,58 @@
+/* --------------------------------------- Kommentering sker här i form av löpande förklaring vad raderna gör för formateringen i valt html dokument; Flera av egenskaperna och dess värden är självförklarande. Där det inte framgår så kommernterar jag ---------------------------------------
+			 Allmänt - Specificerar standard fonten, text färgera m.m. i body nedan!
+						 Funktionsbeskrivning:
+									Sidans huvudegenskaper är full bredd där hela sidan är centrerad i mitten. Typsnittet nedan är default med storlek 12pt och textfärg är vit */
+									  body {width: 1000px; margin: 0 auto; margin-top: 0px; font-family: Verdana; font-size: 1.2em; color: rgb(255, 255, 255);}    
+						
+    /* Layout med boxar
+				 *  Funktionsbeskrivning:
+									 Row klass skapas där row får egenskapen att från början lägga till utrymme automatisk dvs. både paddingoch border inkluderas i de  "col...." klasser jag skkapar.
+									 Detta addresas via ( * ) enligt ( * {box-sizing: border-box;} border-box???
+									 
+									   Jag adderar egenskaperna att allt börjar på vänster sida, avstånd mellan border och innehåll är 5px och med en masiv röd border på X antal px = {float: left; padding: 5px; border: 1px solid red;}
+												Datta blir klassen och elementets selektor = ( col_X ) X = efterföljande namn för just det elementet. För att skapa selektorn används ( [class*="col_"] ) används  hak paranteser.
+												Inom dessa anges att man vill skapa en grupp med samma egenskaper där * adderas för att addera liknande egenskaper med paddign och borders för alla element som skapas med ( col_ ) */
+				
+        * {box-sizing: border-box;}
+        .row:after {content: ""; clear: both; display: block;}
+ 
+        [class*="col_"] {float: left; padding: 5px; border: 1px solid none;}
+												/* Namnen nedan med början.col_ ..... representerar enbart min strukturuppbyggnad*/
+            .col_rubrik {width: 33.33%; margin-bottom: 20px;}	/* I normal fallet heter detta col_(1-12), har gjort detta tydligare för vad som är vad med namn */
+												.col_input {width: 66.66%;}
+															.col_radio_left {width: 25%;}
+													.col_radio_right {width: 75%;}
+										.col_fullrow {width: 100%;}
+
+			/* Frame settings
+			 * * Funktionsbeskrivning:
+										Yttre ram:
+												Är i full bredd med en begränsad höjd av 860px med en border runt om i vald färg med fasade hörn.
+												
+									 Innre ram:
+												Tar upp 80% av bredden men är inflyttad 10% vilket skapar en marginal på 10% på vardera sida. Marginalen till botten är på 5%.  */
+					.outer_frame {width: 100%; height: 860px; background-color: rgb(51, 51, 51); border-radius: 30px;}
+								.Inner_frame {width: 80%; margin-left: 10%; margin-bottom: 20px;}
+											.form_bcolor {background-color: rgb(0, 0, 0); border-radius: 30px;}
+											fieldset .form_bcolor {border-radius: 0px;} /* Vill visa ett av flera sätt att fixa detta på, orts inramninen skall inte ha fasade hörn. */
+											
+			/* Text */
+					.form_lcolor {font-size: 16pt; font-weight: bold; ;}
+					legend {font-size: 14pt; font-weight: bold;}
+		
+					.label_for_input {margin-left: 10px; margin-bottom: 20px; font-size: 1.2em; font-weight: bold; letter-spacing: 3px; font-style: italic;}
+									.ort_rubrik {font-size: 1.2em; font-weight: bold; letter-spacing: 3px; font-style: italic;}
+									
+					.input_form {margin-left: 20px; width: 200px; font-size: 1.2em; letter-spacing: 3px;}
+				
+		.input_texarea {margin-left: 20px; height: 150px; width: 400px;}
+		
+		#action_buttons {margin-left: 40%;}
+			.submit_button {margin-right: 30px;}
+
+			h1 {text-align: center;}
+			
+/* Övrigt */
+			.buttom_space {margin-bottom: 20px;}
+			.required {margin-bottom: -20px; color: rgb(255, 0, 0 );}
+			.dropdown_more_right {margin-left: 20px;}

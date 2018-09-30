@@ -1,0 +1,131 @@
+<!-- Inom "head" taggen kopplar jag min html fil till stilmallen [uppgift_3b.css]. -->
+<!doctype html>
+<html lang="sv">
+			<head>
+						<meta charset="utf-8">
+						<link rel="stylesheet" href="uppgift_3b,3c.css">
+						<title>Supportformulär</title>
+			</head>
+			<body>
+			<div class="outer_frame">
+						<!-- Yttre ram adderas -->
+					<div class="Inner_frame">
+									<!-- Innre ram adderas med rubrik. Ramen skapar ett spelrum till yttre ramen på sidorna -->
+								<h1>Supportformulär</h1>
+								<p>Här kan du skicka ett ärende till supportavdelningen.</p>
+								<p>* = Krävs</p>
+												<!-- Innanför taggen <form></form> skapar jag mitt formulär -->
+												<form action="http://staff.www.ltu.se/~susfah/VT18/parse_form.php" method="post" autocomplete="on">
+														<!-- Formuläret grupperas med namn "Meddelande" inkl en inramning. Taggen -->
+														<fieldset class="form_bcolor">
+																	<legend>Meddelande</legend>
+																				<!-- Rader adderas med passande inputs inkl dess rubriker. Layouten stys av CSS grids där rubrik och inputs läggs i var sin cell.
+
+																									Nedan gäller för samtliga rader:
+																										rader	=	row klassen
+																										Celler för rugbriker	=	col_rubrik (Reppresenterar ) -->
+																				<div class="row">
+																							<div class="col_rubrik">
+																										<label for="namn" class="label_for_input">Ditt Namn</label>
+																							</div>
+																							<div class="col_input">
+																											<div class="required">*</div>
+																											<input type="text" autofocus id="namn" name="namn" class="input_form" placeholder="Ditt namn" maxlength="20" required>
+																							</div>
+																				</div>
+																				<div class="row">
+																							<div class="col_rubrik">
+																										<label for="telefon" class="label_for_input">Telefon</label>
+																						 </div>
+																							<div class="col_input">
+																										<input type="tel" id="telefon" name="telefon" class="input_form" placeholder="Telefon Nr">
+																							</div>
+																				</div>
+																				<div class="row">
+																							<div class="col_rubrik">
+																								 <label for="prioritet" class="label_for_input">Prioritet</label>
+																							</div>
+																							<div class="col_input">
+																									<!-- En dropdown lista skapas -->
+																												<select class="dropdown_more_right" id="prioritet" name="prioritet">
+																															<option value="1" selected>Låg</option> <!-- Alternativet är förvalt genom attributet "selected" -->
+																															<option value="2">Normal</option>
+																															<option value="3">Hög</option>
+																												</select>
+																								</div>
+																				</div>
+																				<!-- En inramning för valeb skapas med namn "Ort" -->
+																				<fieldset class="form_bcolor buttom_space">
+																							<legend>Ort</legend>
+																										<div class="row">
+																													<div class="col_rubrik ort_rubrik">
+																															Tilldela till ort
+																													</div>
+																													<div class="col_input">
+																														<!-- Valmöjligheter för ort skapas med hjälp av s.k. radio buttons med förklarande text för vardera alternativ.
+																																			4 indentiska rader skapas med två celler per rad, dess selektorer är svälvförklarande -->
+																																	<div class="row">
+																																				<div class="col_radio_left"><label for="gbg">Göteborg</label> </div>	<div class="col_radio_right"><input type="radio" id="gbg" name="ort" value="gbg"></div>
+																																	</div>
+																																	<div class="row">
+																																				<div class="col_radio_left"><label for="sthlm">Stockholm</label></div>	<div class="col_radio_right"><input type="radio" id="sthlm" name="ort" value="sthlm"></div>
+																																	</div>
+																																	<div class="row">
+																																				<div class="col_radio_left"><label for="ume">Umeå</label></div>	<div class="col_radio_right"><input type="radio" id="ume" name="ort" value="ume"></div>
+																																	</div>
+																																	<div class="row">
+																																				<div class="col_radio_left"><label for="lule">Luleå</label></div> <div class="col_radio_right"><input type="radio" id="lule" name="ort" value="lule" checked></div> <!-- Alternativet är förvalt genom attributet "checked" -->
+																																	</div>
+																													</div>
+																										</div>
+																				</fieldset>
+																				<div class="row">
+																							<div class="col_rubrik">
+																								 <label for="kategori" class="label_for_input">Kategori</label>
+																						 </div>
+																							<div class="col_input">
+																								<!-- En dropdown lista skapas -->
+																											<select class="dropdown_more_right" id="kategori" name="kategori">
+																														<option value="fakt" selected>Fakturering</option> <!-- Alternativet är förvalt genom attributet "selected" -->
+																														<option value="net">Internet</option>
+																														<option value="tel">Telefoni</option>
+																														<option value="epost">E-post</option>
+																											</select>
+																							</div>
+																				</div>
+																				<div class="row">
+																						<div class="col_rubrik">						
+																									<label for="rubrik" class="label_for_input">Rubrik</label>
+																					 </div>
+																						<div class="col_input">
+																								<div class="required">*</div>
+																								<input type="text" id="rubrik" name="rubrik" class="input_form" placeholder="Rubrik/Ämne" maxlength="20" required>
+																						</div>
+																				</div>
+																				<div class="row">
+																						<div class="col_rubrik">				
+																									<label for="beskrivning" class="label_for_input">Beskrivning</label>
+																						</div>
+																							<div class="col_input">
+																							 	<div class="required">*</div>
+																									<textarea id="beskrivning" name="beskrivning" class="input_texarea" placeholder="Ditt meddelande" required></textarea>
+																							</div>
+																				</div>
+																				<div class="row">
+																						<div class="col_fullrow">
+																										<div id="action_buttons">
+																														<!-- När formuläret är skapat adderas 2 knappar som antingen rensar type="reset" eller kör formuläret: type="submit" vilket i sin tur skickar formuläret enligt:  
+																														form action="http://staff.www.ltu.se/~susfah/VT18/parse_form.php" på rad: 18. Detta innebär att ett php skript på given plats tar emot och kör mitt formulär. Method="post"
+																														skickar över formuläret till php skriptet säkert över HTTP så ingen ser vad som skickas -->
+																														<input type="submit" name="skicka" value="Submit" class="submit_button">
+																														<input type="reset" name="reset" value="Reset">	
+																										</div>
+																						</div>
+																				</div>
+														</fieldset>
+													<!-- Formuläret avslutas -->
+												</form>	
+					</div> <!-- Innre ram avslutas -->
+			</div> <!-- Yttre ram avslutas -->
+			</body>
+</html>

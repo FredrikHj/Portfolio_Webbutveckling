@@ -1,0 +1,88 @@
+/* General; CSS filen styr formateringen för labb 1 i HTML / CSS */
+	body {width: 1300px; margin: auto; height: 670px; background-color: rgb(255, 255, 255); font-family: Arial; font-size: 13pt;}
+		
+	/* CSS Grid system - För bl.a. yttre och innre ram */          
+		* {box-sizing: border-box;}
+		.row:after {content: ""; clear: both; display: block;}
+
+		[class*="col-"] {float: left; padding: 5px; border: 1px none;}
+			.col-1 {width: 8.33%;}
+			.col-2 {width: 16.66%;}
+			.col-3 {width: 25%;}
+			.col-4 {width: 33.33%;}
+			.col-5 {width: 41.66%;}
+			.col-6 {width: 50%;}
+			.col-7 {width: 58.33%;}
+			.col-8 {width: 66.66%;}
+			.col-9 {width: 75%;}
+			.col-10 {width: 83.33%;}
+			.col-11 {width: 91.66%;}
+			.col-12 {width: 100%;}
+		
+		h1 {text-align: center; letter-spacing: 3px;}
+	a {text-decoration: none;} 
+	
+	/* Header */ 
+		#head_box {margin-top: 2px; height: 130px; color: rgb(255, 255, 255); border: 3px solid rgb(51, 51, 51); background-color: rgb(51,51,51); border-top-left-radius: 130px; border-top-right-radius: 130px;}
+		#head_frame {width: 100%; height: 75px;}
+		
+			#head_box h1 {text-align: center; margin-top: 40px; letter-spacing: 5px;} 
+	
+		/* Navbar*/
+			navbar {width: 50%; margin: auto; display: flex; flex-direction: row; justify-content: center;}
+				navbar div {width: 30%; height: 30px; margin-top: -15px; background-color: rgb(255,140,0);}
+					navbar div:first-child {border-top-left-radius: 30px;}
+					navbar div:last-child {border-top-right-radius: 30px;}
+		
+			/* Platsmarkeringar */
+				.m1:hover {transform: scale(1,2); background-color: rgb(255,140,0); width: 40%; border-top-right-radius: 9px;}
+				.m2:hover, .m3:hover {transform: scale(1,2); background-color: rgb(255,140,0); width: 40%; border-top-left-radius: 9px; border-top-right-radius: 9px;}
+				.m4:hover {transform: scale(1,2); background-color: rgb(255,140,0); width: 40%; border-top-left-radius: 9px;}
+				
+					#active_option_m1 {transform: scale(1,2); background-color: rgb(255,140,0); width: 40%; border-top-right-radius: 9px;}
+					#active_option_m2_m3 {transform: scale(1,2); background-color: rgb(255,140,0); width: 40%; border-top-left-radius: 9px; border-top-right-radius: 9px;}
+					#active_option_m4 {transform: scale(1,2); background-color: rgb(255,140,0); width: 40%; border-top-left-radius: 9px;}
+				
+	/* Main contents */
+		main {Width: 100%; margin-top: -6px; color: rgb(0,0,0); margin-bottom: 0px;} 
+		#headline {width: 100%; height: 25px; background-color: rgb(255,140,0);}
+		
+			.col-contents_area {width: 71%; height: 520px; background-color: rgb(255, 255, 255);
+			/* Dessa attribut fixar mmitt innehålls fönster :) */
+					border-left: 50px solid rgb(0, 0, 0); border-top: 50px solid rgb(255, 140, 0); border-right: 50px solid rgb(0, 0, 0); border-bottom: 50px solid rgb(255, 140, 0);}
+					
+				.ntext {margin-left: auto; height: 320px; width: 97.9%; overflow-y: auto; background-color: rgb(255, 255, 255);}
+				ul {margin: auto;}
+				
+		/* Frame styling */
+			.col-left_area {margin-left: 0px; width: 15.5%; height: 520px; background-color: rgb(51, 51, 51);}
+			.col-right_area {margin-right: -1%; width: 13.5%; height: 520px; background-color: rgb(51, 51, 51);}
+		
+		/* Om mig */
+			#ommig_floatleft {width: 150px; margin-right: 20px; height: 160px; float: left; background-color: rgb(255, 255, 255);}
+				#om_mig_sefies {width: 100%; border-radius: 30px;}
+				
+			/* Movie */
+				table {border-collapse: collapse; border: 2px solid grey;}
+				th, td {border: 1px solid grey; width: 300px; margin: 5px;}
+				th {background-color: black; font-size: 20px; color: white;}
+				tr:nth-child(2n) {background-color: lightgrey;}
+				
+		/* Länkar */
+			.linkscenter {margin-left: 35%;}
+		
+		/* Formuläret */
+			form {width: 75%; margin: auto;}
+			
+		.messcenter {margin-left: 10%;}
+		.subjectmargin {margin-left: 25%; margin-top: 2%;}
+
+	/* Footer */
+		footer {width: 100%; height: 50px; display: flex; flex-direction: row; justify-content: center; background-color: rgb(51,51,51); color: white;}
+			footer .headfooterlinks_color  {margin-top: 13px; width: 300px; text-align: center;}
+			
+		footer p {margin-top: -1.5px;}
+
+	/* Övrigt */
+		navbar p {margin: 1px;}
+			.headfooterlinks_color {text-align: center; color: rgb(255,255,255);}

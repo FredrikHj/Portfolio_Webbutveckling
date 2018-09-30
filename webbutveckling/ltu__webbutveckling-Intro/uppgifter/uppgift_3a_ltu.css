@@ -1,0 +1,56 @@
+/* --------------------------------------- Kommentering sker här i form av löpande förklaring vad raderna gör för formateringen i valt html dokument; Flera av egenskaperna och dess värden är självförklarande. Där det inte framgår så kommernterar jag --------------------------------------- 
+		Funktionsbeskrivning:
+					Sidans huvudegenskaper är full bredd där hela sidan är centrerad i mitten. Typsnittet nedan är default med storlek 12pt och textfärg är vit med bakgrundsfärg svart! */
+			body {width: 1000px; margin: 0 auto; margin-top: 10px; font-family: Candara, Verdana, sans-serif; font-size: 1.2em; color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);}    
+
+			/* Frame settings
+			 * Funktionsbeskrivning:
+							Yttre ram är i full bredd med en border runt om i vald färg viklket har fasade hörn. */
+			.outer_frame {width: 100%; border: 2px rgb(51, 51, 51) solid; border-radius: 30px;}
+/*
+		
+/* Text hantering
+* Funktionsbeskrivning:
+									Texten i p taggar flyttas in och sätter olika egenskaper med tillhörande värden på h1-h6 rubriker med bl.a. bredd, marginaler och typsnitt */
+			p {margin-left: 15px;}
+			h1 {font-family: Arial, Helvetica, sans-serif; text-align: center;}
+			h2 {width: 450px; text-align: center; margin-bottom: 10px; font-family: Arial, Helvetica, sans-serif;}
+			
+						h3, h4, h5, h5 {margin-left: 20px; margin-bottom: 10px; font-family: Arial, Helvetica, sans-serif;}
+
+/* Tabeller
+* Funktionsbeskrivning:
+									Nedan stylar jag de färdiga taggarna "table" och "caption" med diverse egenskaper med dess värden. Stylar också elemnten för tabell1 och tabell2 med bl.a. possition på sidan, bredd, färger m.m. */
+
+						table {margin-top: -30px;}
+						.tabell1 {margin-left: 600px; margin-top: -95px; width: 200px; color: brown; background-color: #ffcccc;}
+						caption {font-size: 15pt; font-weight: bolder;}
+						
+						/* Användeer en Pseudo class för att ändra enbart på den första förekommande caption taggen */
+									caption:first-child {margin-left: -30px; margin-top: -12px; margin-bottom: 10px;}
+									
+			.tabell2 {margin-left: 450px; margin-top: -250px; width: 450px; color: brown; background-color: #ffcc99;}
+			
+						/* Här säger jag åt den att sätta min angivna styling på tabell 2 thead element */
+						.tabell2 thead th {border-bottom: 2px solid rgb(0, 0,0);}
+						
+			.foot {background-color: rgb(0, 0, 0); color: #009900;}
+			
+			/* Sätter style på id selector source och dess text. Bestämmer att alla länkar ska ha orange gul vid normal länkd, icke besökta än, vid hovring över byter länkarna färg genom a:hover */
+			#source {color: green;}
+			a:link {color: rgb(255, 165, 0);}
+			a:hover {color: rgb(51, 51, 51);}
+			
+	/* Listor
+	 * Funktionsbeskrivning:
+								Flyttar in mina listor både från vänster och från toppen */
+			ul {margin-left: 20px; }
+			
+			.lista {margin-top: -5px;}
+						
+		/* Övrigt
+		 * Funktionsbeskrivning:
+		 * 	Häär anger jag styling för mina skiljelinjer på horisontellt och vertikalt 
+						Vågrät linje & vertikal linje */
+						hr {width: 80%; margin-left: 10%; margin-bottom: 15px; background-color: rgb(255, 255, 255); font-style: italic;}
+						#vertical_line {border-left: 2px rgb(255, 255, 255) solid; margin-left: 420px; margin-top: 30px; height: 500px; margin-bottom: -525px;} 

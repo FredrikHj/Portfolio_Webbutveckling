@@ -1,0 +1,162 @@
+﻿<!-- Inom "head" taggen kopplar jag min index till minaa sidor och stilmallar i mappen [data_struktur] | Jag ger hemsidan ett namn under taggen "title" -->
+ 
+<!doctype html>
+<html lang="sv">
+			<head>
+						<meta charset="utf-8">
+						<meta name="viewport" content="width=device-width, initial-scale=1">
+						
+						<link rel="icon" href="data_struktur/bilder/logga_small.png" sizes="16x16">
+						
+						<title>3D Studio</title>
+
+					<!-- Inkludera CSS & Javascript med jQuery -->						
+							<link rel="stylesheet" type="text/css" href="data_struktur/css/general.css">
+									<link rel="stylesheet" type="text/css" href="data_struktur/css/text.css">
+									<link rel="stylesheet" type="text/css" href="data_struktur/css/form.css">
+									<link rel="stylesheet" type="text/css" href="data_struktur/css/navbars.css">
+					
+							<script src="data_struktur/js/3.2.1_jquery.min.js"></script>
+									
+							<!-- Menyval 4 = Anpassa menyn visas och döljs här, EJ aktiv (Se rapport för varför) -->
+									<script>
+											 $(document).ready(function()
+															{
+																	  		$(".adaptmeny").hide();
+																
+																					$("#m4").click(function(){$(".adaptmeny").toggle();});
+															});
+									</script>
+									<script src="data_struktur/js/general.js"></script>
+									<script src="data_struktur/js/navbar_n1.js"></script>
+									<script src="data_struktur/js/navbar_n2.js"></script>
+			</head>
+			<body onload="headPage(); startDateTime()">
+						<div class="row">
+									<!-- Navbaren -->
+									<div class="col-12" id="navbar_outerarea">			
+												<div class="row">
+															<div class="col-3">
+																		<a title="Förstasidan" href="#Huvudsidan" onclick="headPage();"><img class="logga" alt="Företagets logga & till huvudsida!" title="Företagets logga vissas här!" src="data_struktur/bilder/logga_small.png"></a>
+															</div>
+															<div class="col-9 navbar_border">
+																		<div id="navbar_innerarea">	<!-- Se kommenteringsfil för Javascript -->
+																					<ul>
+																									<li><a id="m3" href="#Om" onclick="n1HMOm();">Om Mig</a></li>
+																									<li><a id="m1" href="#3d?" onclick="n1HMVad3d()">Vad är 3d</a></li>
+																									<li><a id="m2" href="#Tjänster_Produkter" onclick="n1HMTjP();">Tjänster & Produkter</a></li>
+																									<li><a id="m4">Anpassa</a></li>
+																					</ul>
+																	</div>
+															</div>
+												</div>			
+									</div>
+						</div>
+						<!-- Mittavdelare top -->
+						<div class="colkohrstyle_top"></div>						
+						<!-- Rammen med innehåll -->
+						<div class="col-12" id="outerbox">
+										<div class="row areas_poss">
+													<!-- Del av ramen runt -->
+													<div class="col-left_area_framefil"></div>
+													<div class="col-left_area">
+															<!-- Undermenyn laddas in här -->
+																<div id="under_meny"></div>	<!-- Se kommenteringsfil för Javascript -->
+													</div>
+													<!-- Det faktiska innehållet laddas in här -->
+													<div class="col-contents_area" id="load_content"></div> 	<!-- Se kommenteringsfil för Javascript -->
+													<!-- Anpassa menyn visas och döljs här-->
+													<div class="col-right_area">
+																<div class="row">
+																			<div class="adaptmeny">	<!-- Se kommenteringsfil för Javascript -->
+																						<div class="row">
+																								<div class="col-12">
+																										<div class="rtext_adapt">Menyer:</div>
+																								</div>
+																						</div>
+																						<div class="row">
+																									<div class="col-12">
+																												Textstorlek<br>
+																													<select disabled>
+																															<option onclick="mTextStorlekStandard();" selected >Standard</option>
+																															<option onclick="mTextStorlek13();">13pt</option>
+																															<option onclick="mTextStorlek14();">14pt</option>
+																													</select>
+																									</div>
+																						</div>
+																						<div class="row">
+																									<div class="col-12">
+																												Textfärg<br>
+																												<select disabled>
+																															<option onclick="mTextColorStandard()" selected>Standard</option> 
+																															<option onclick="mTextColorYellow()">Gul</option>
+																												</select>
+																									</div>
+																						</div>
+																						<div class="row">
+																									<div class="col-12">
+																												Teckenavstånd<br>
+																												<select disabled>
+																															<option onclick="mTextSpaceStandard()" selected>Standard</option>
+																															<option onclick="mTextSpace3()">3px</option>
+																												</select>
+																									</div>
+																						</div>
+																						<div class="row">
+																									<div class="col-12">
+																											 <div class="rtext_adapt">Undersidor:</div>
+																									</div>
+																						</div>
+																						<div class="row">
+																									<div class="col-12">
+																												Rubrikstorlek<br>
+																												<select disabled>
+																														<option onclick="rbTextStorlekStandard();" selected>Standard</option>
+																														<option onclick="rbTextStorlek22();">22pt</option>
+																														<option onclick="rbTextStorlek24();">24pt</option>
+																												</select>
+																									</div>
+																						</div>
+																						<div class="row">
+																									<div class="col-12">
+																												Textstorlek<br>
+																												<select disabled>
+																															<option onclick="bTextStorlekStandard();" selected>Standard</option>
+																															<option onclick="bTextStorlek13();">13pt</option>
+																															<option onclick="bTextStorlek14();">14pt</option>
+																												</select>
+																									</div>
+																						</div>
+																			</div>
+																</div>			
+													</div>
+													<!-- Del av ramen runt -->
+													<div class="col-right_area_framefil"></div>
+										</div>
+						</div>
+						<!-- Mittavdelare bottom; Den visas inte när jag adderar den där den igentligen ska placeras? Fixar det med css se [general.html] Rad: 60 -->
+						<div class="colkohrstyle_bottom"></div>
+						<div class="row">
+									<div class="col-12">				
+										<!-- Sidfot -->		
+												<div class="row">
+															<div id="footer">
+																		<div class="row">
+																					<div class="col-4">
+																							<h4>Copyright: Fredrik Hjärpe</h4>
+																					</div>
+																					<!-- Kontakta mig knapp -->
+																					<div class="col-4">
+																								<a href="#Kontakt" onclick="loadContactForm()" title="Kontakt formulär med 1 sida"><img class="contact_form" alt="Kontakt formulär!" title="Gå till kontakt formuläret!" src="data_struktur/bilder/contact.png"></a>
+																					</div>
+																					<!-- Datum & tid-->
+																					<div class="col-4">	
+																								<div id="addDateTime"></div>								
+																					</div>
+																		</div>
+															</div>
+												</div>
+								</div>
+						</div>
+			</body>
+</html>

@@ -1,0 +1,55 @@
+/* --------------------------------------- Här ska min stilmall skapas för att styra min hemsida. --------------------------------------- */
+/* Allmänt - Specificerar standard fonten, text färgera m.m. i body nedan! */
+   body {width: 1400px; margin: 0 auto; margin-top: 0px; height: 100%; font-family: Verdana; font-size: 1.2em; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);}    
+
+    /* Layout med boxar */          
+        * {box-sizing: border-box;}
+        .row:after {content: ""; clear: both; display: block;}
+    
+						/* Gemensm styrning för [col- till 12 via namnet col- */
+        [class*="col-"] {float: left; padding: 5px; border: 0px solid red;}
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+							
+									/* Outer box = cb |; Detta styr min uppbyggnad av fålt och diverse områden webbsidan består av */
+								#outer_cb {background-color: rgb(51, 51, 51);}
+									.col-left_area {width: 16%; margin-top: 85px;}		
+									.col-contents_area {width: 69%; height: 700px; margin-top: 30px; margin-bottom: 30px; padding-right: 20px; background-color: rgb(255, 255, 255); border: inset; border-color: grey; border-width: 25px; border-radius: 30px;}
+             
+/* Bild hantering; Hanterar mina bilder */
+					#om_mig_sefies {width: 100%; border-radius: 30px;}
+						#hem {margin-left: 10%;}
+			
+/* Text hantering */
+			/* Bestämmer att taggarna h1-h6 är centrerade */
+			h1, h2, h3, h4, h5, h5 {text-align: center;}
+						
+		/* Normal text = ntext; Dess egenskap är bl.a. att visa en skroll meny vid behov */
+		#ntext {width: 100%; margin-left: 15px; height: 550px; overflow-y: scroll; background-color: rgb(255, 255, 255);}
+		
+						/* #ntext och #float_left skapar tillsammans ett omslutade text runt mitt proträtt, se "Om mig" :) */
+						#float_left {width: 20%; margin-right: 20px; margin-bottom: 20px; height: 160px; float: left; background-color: rgb(255, 255, 255);}
+  
+  /* Övrigt */
+						/* Undermenyn */
+							.under_meny {text-align: center; background-color: rgb(255, 255, 255); margin-top: 50px; width: 100%; color: rgb(0, 0, 0);}
+
+					/* Listor; Här sätter jag en egenskap att li elementen i listan inte ska ha en punkt eller dylikt */
+					li {list-style-type: none;}
+					
+					/* Tabell */
+									table {margin-left: 60px; border: 2px solid rgb(51, 51, 51); border-collapse: collapse;}
+												tr, td {border-bottom: 1px solid rgb(51, 51, 51);}
+												td {width: 150px; text-align: center;}
+															tr:first-child {font-weight: bold; font-size: 20px; background-color: rgb(51, 51, 51); color: rgb(255, 255, 255); padding-top: 0px;} 
+															tr:nth-child(2) {font-weight: bold;}

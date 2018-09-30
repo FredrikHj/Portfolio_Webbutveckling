@@ -1,0 +1,35 @@
+Javascript kommentarer:
+I Fil:									Plats i fil:																													Beskrivning av kod:
+general.js					startDateTime();																									Visar datum_måna_år följt av tid!
+
+navbar_n1						Navbar - Markeringar Nivå 1: Reset							Tar bort de eventuella markeringarna hos respektive meny val
+											 			Navbar - Markeringar Nivå 1														Ändrar CSS till att markera sidan besökaren befinner sig på!
+															Navbar - Laddar kontakt formulär									Laddar in kontakt formuläret (Ajax) till: Div = id="load_content" på rad 67 i index.html
+															Navbar - Laddar sidor Nivå 1													Laddar in menyvalet (Ajax) till: Div = id="load_content" på rad 67 i index.html 
+															Navbar - Laddar undermeny Nivå 1									Laddar in den valda undermenyn (Ajax) till: Div = id="under_meny" på rad 64 i index.html
+																		
+															
+navbar_n1   			Undermeny - Markeringar Nivå 2: Reset    Tar bort de eventuella markeringarna hos respektive undermeny val
+															Undermeny - Markeringar Nivå 2							 			Ändrar CSS till att markera undersidan besökaren befinner sig på!
+															Undermeny - Laddar sidor Nivå 2										Laddar in menyvalet och dess eventuella undermeny (Ajax) till: Div = id="load_content" på rad 67 i index.html 
+															
+Funktion namnen och id för javascripten är enligt (vänster till höger):
+Navbar										Tillhörande Undermeny
+Val 1 - m3						menu_sociacom.html 				- Gemensamt id = linknsoc och länkas till ett externt fönster
+Val 2 - m1						menu_3d.html											- Valen har id = m11, m12 & m13. Funtionerna = n2M11(), n2M12() & n2M13()!
+Val 3 - m2						menu_serviceproducts			- Valen har id =	m21, m22. Funtionerna = n2M21() & n2M22()!
+Val 4 - m4						Ingen fil utan se Menyval 4 på rad 26 i fil index.html! Funktionen visar och döljer Annpassa menyn i: class="adaptmeny" på rad 72 i index.html 
+
+ta med i rapport om namngivningen!!!
+
+CSS formatering från Javascript:
+
+			CSS formateringarna högst upp i filerna: navbar_n1 & navbar_n1 hittar du dessa funktioner som triggas från menyvalens: 1 - 3 funktioner som återfinns nedanför dessa css formateringar.
+			Menyvalen 1 - 3 med: id="navbar" finns på rad 49 - 56 i index.html. 
+
+			Funktioner gör att besökaren  informeras om var hen är på Webnbplatsen genom att göra samma sak som css formateringen i fil lists.css under rubriken: Navbar och undermeny --> 	li a:hover:not(.active) 
+			fast genomm detta så förblir formateringen permanent till jag gör forrmateringen neutral igen!
+			
+			Funktionen ändrar valt html element via dess ID med funktionens valda css attribut och sätter ett eget värde som gäller tillvidare! Förklara varför detta är inaktivt i rapporten!
+			
+			Menyvalet 4 representerar en Anpassa meny på rad 72 - 134. Är inaktivt men bara för att visa att jag förstått det här med visa och döla information :)

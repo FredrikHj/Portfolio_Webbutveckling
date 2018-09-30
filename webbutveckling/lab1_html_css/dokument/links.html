@@ -1,0 +1,59 @@
+<!-- Inom "head" taggen kopplar jag min index till min stilmall i mappen css | Jag ger hemsidan ett namn under taggen "title" -->
+<!doctype html>
+<html lang="sv">
+	<head>
+		<meta charset="utf-8">
+		<title>Lab 1 - HTML / CSS</title>
+		
+		<!-- Inkludera CSS -->						
+			<link rel="stylesheet" type="text/css" href="../css/style.css">
+			
+		<!-- Inmkludera lite ikoner -->
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
+	<body>
+		<div id="head_box">
+			<header>
+				<div id="head_frame">
+					<a href="../index.html" alt="Return to Index"><h1 class="headfooterlinks_color">Lab 1 - HTML / CSS</h1></a>
+				</div>
+			</header>
+			<navbar>
+				<div class="m1"><a href="about.html" title="Om Mig"><p class="headfooterlinks_color">Om Mig</p></a></div>
+				<div class="m2"><a href="movies.html" title="Mina Filmer"><p class="headfooterlinks_color">Favoritfilmer</p></a></div>
+				<div class="m3" id="active_option_m2_m3"><a href="links.html" title="Länkar"><p class="headfooterlinks_color">Mina länkar</p></a></div>
+				<div class="m4"><a href="contact.html" title="Kontakt"><p class="headfooterlinks_color">Kontakt</p></a></div>
+			</navbar>
+		</div>
+		<div id="headline"></div>
+		<main>
+			<!-- Left side of the frame -->
+				<div class="col-left_area"></div>
+			
+			<!-- Inehållet placeras här -->
+				<div class="col-contents_area">
+					<h1>Mina Länkar</h1>
+					<div class="ntext">
+						<ul class="linkscenter">
+							<li><a href="https://www.aftonbladet.se/" title="Aftonnladet" target="_blank">Aftonbladet</a></li>
+							<li><a href="https://www.hd.se/" title="Helsingborgs Dagtblad" target="_blank">Helsingborgs Dagblad</a></li>
+							<li><a href="https://www.google.se/" title="Google" target="_blank">Google</a>
+								<ul> 
+									<li><a href="https://calendar.google.com/calendar/r" title="Google - Kalender" target="_blank">Google - Kalender</a></li>
+									<li><a href="https://translate.google.se/?hl=sv" title="Google - Översätt" target="_blank">Google - Översätt</a></li>
+								</ul>
+							</li>
+							<li><a href="https://www.studentkortet.se/" title="Studentkortet" target="_blank">Studentkortet</a></li>
+						</ul>								 	
+					</div>
+				</div>
+			
+			<!-- Right side of the frame -->
+				<div class="col-right_area"></div>
+		</main>
+		<footer>
+			<div><a href="https://www.facebook.com/freddehboy" title="Min Facebook profil" target="_blank"><p class="headfooterlinks_color">Facebook - Fredrik Hjärpe</p></a></div>
+			<div><a href="mailto:fredrik.hjarpe@telia.com"><i class="material-icons headfooterlinks_color">contact_mail</i></a></div>
+		</footer>
+	</body>
+</html>
